@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../t4me/css/debug/bootstrap_ltr.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Wikipedia Viewer [Angularjs]</title>
+</head>
+<body>
+	<div ng-app="wikiApp">
+	  <div class="container text-center" ng-controller="wikiCtrl">
+	    <div class="row head" ng-hide="showD">
+	      <h1 class="h1">Wikipedia Viewer</h1>
+	    </div>
+	    <div class="col-md-6 center-block">
+	      <form class="form" name="form" novalidate>
+	        <div class="form-group input-group has-feedback" ng-class="{'has-error': form.s.$dirty && form.s.$invalid, 'has-success': form.s.$dirty && form.s.$valid}">
+	          <input type="search" name="s" ng-model="s" class="form-control" placeholder="Search.." required />
+	          <span class="btn btn-danger input-group-addon" ng-show="showD" ng-click="showD = false; showErr = false;s = ''">X</span>
+	        </div>
+	        <div class="form-group">
+	          <button class="btn btn-success" ng-click="wikiS(s)" ng-disabled="form.s.$invalid">Search</button>
+	          <a target="_blank" href="https://en.wikipedia.org/wiki/Special:Random" class="btn btn-info">Random Article</a>
+	        </div>
+	      </form>
+	    </div>
+	    <div class="row" ng-show="loader">
+	      <div class="loader">Loading...</div>
+	    </div>
+	    <div class="row" ng-show="showErr" class="flipX">
+	      <div class="alert alert-danger">
+	        <b>Error</b>: {{ err }}
+	      </div>
+	    </div>
+	    <div class="row s-temp ng-hide col-md-8 center-block text-left" ng-show="showD">
+	      <div ng-repeat="i in arr" class="flipX wikiD">
+	        <a target="_blank" href="https://en.wikipedia.org/wiki/{{ slug(i.title) }}" class="media">
+	          <div class="media-left"></div>
+	          <div class="media-body">
+	            <h4>{{ i.title }}</h4>
+	            <p ng-bind-html="i.snippet"></p>
+	          </div>
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<script type="text/javascript" src='../t4me/js/debug/angular.min.js'></script>
+	<script type="text/javascript" src='../t4me/js/debug/angular-animate.min.js'></script>
+	<script type="text/javascript" src='../t4me/js/debug/angular-sanitize.min.js'></script>
+	<script type="text/javascript" src='script.js'></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+.center-block {
+  float: none;
+  margin-top: 2rem;
+  transition: all ease 1s;
+  -moz-transition: all ease 1s;
+}
+
+.head {
+  margin-top: 10rem;
+}
+
+.h1 {
+  font-size: 7rem;
+  margin-bottom: 1em;
+}
+
+.btn {
+  margin-left: 3em;
+}
+
+.ng-hide {
+  display: none;
+}
+
+.form-group {
+  width: 100%;
+}
+
+span.btn-danger {
+  color: #fff !important;
+  border-color: transparent !important;
+  background-color: red !important;
+}
+
+.wikiD {
+  background: rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  transition: all ease 0.4s;
+  -webkit-transition: all ease 0.4s;
+  -moz-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+}
+
+.wikiD:hover {
+  border-left: 4px solid #00ffae;
+  background-color: #f2f2f2;
+}
+
+.media-body p {
+  color: #6e6e6e;
+}
+
+
+/** css loader  http://projects.lukehaas.me/css-loaders/ */
+
+.loader {
+  color: #008080;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease;
+  animation: load6 1.7s infinite ease;
+}
+
+
+/** ng-animate animation http://www.nganimate.org */
+
+.flipX.ng-enter,
+.flipX.ng-leave,
+.flipX.ng-hide-add,
+.flipX.ng-hide-remove {
+  -webkit-transition: 450ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+  -moz-transition: 450ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+  -ms-transition: 450ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+  -o-transition: 450ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+  transition: 450ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+  position: relative;
+  display: block;
+}
+
+.flipX.ng-leave.ng-leave-active,
+.flipX.ng-enter,
+.flipX.ng-hide-add.ng-hide-add-active,
+.flipX.ng-hide-remove {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  opacity: 0;
+}
+
+.flipX.ng-enter.ng-enter-active,
+.flipX.ng-leave,
+.flipX.ng-hide-remove.ng-hide-remove-active,
+.flipX.ng-hide-add {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+
+/** animations */
+
+@-webkit-keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+
+@keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
